@@ -1,0 +1,290 @@
+					---python file---
+
+
+Function of an array:
+
+insert - insert element at required position with respect to index number
+append - append element at the end of string, array
+remove - remove given element
+pop - remove element from the index number
+extend - extend the list
+sort - will sort array
+reverse - will reverse array 
+
+Dictionary Elements:
+
+it accepts the key and its value. We can access the elements through its key.\
+one key can have multiple values.
+
+example--
+fruit = {
+		1 : "banana",
+		2 : "orange"
+}
+print(fruits[2])
+
+**we can zip or merge the values and keys through following**
+
+keys = ['pranav', 'rushil', 'dharmik']
+values = ['python', 'react', 'android']
+data = dict(zip(keys,values))
+print(data)
+
+**to get the address just type id(variable_name)
+
+--Datatypes--
+
+none 
+numeric
+list 
+tuple
+set
+string
+dictionary
+range
+
+--Operators--
+
+arithmatic {+,-,*,/}
+assignment {=,+=,-=,*=,/=}
+relational {>,<,>=,<=,==,!=}
+logical {AND,OR,NOT}
+
+**swap variabele without external variable**
+
+a = a + b
+b = a - b
+a = a - b
+
+a,b = b,a 
+
+**we can import modules by typing import module_name
+you can use alice like import math as m
+
+**if you want single character from user through input function you can type 
+
+a = input("enter single character:") [0] 
+
+
+**conditional statement**
+
+1) if 
+2) if - else
+
+**loops**
+
+1)while
+2)for
+
+**Array**
+
+array has the data of same datatype
+
+-int array has only integers.
+-yo use array in python you have to import array.
+-we can use array through " from array import * "
+-vals = array('i', [1,2,3,4])
+
+**Numpy??**
+
+-it is used in multiple array.
+--functions--
+1)array
+2)linspace()
+3)logspace()
+4)arange() -- it is range
+5)zeros()
+6)ones()
+
+
+**functions**
+
+-syntax : 
+
+def greet():
+    print("Hi Programmer!")
+greet()
+
+**global variables**
+
+-we can simply use global variables by defining it outside the function
+-example-
+a = 10 #global variable
+def scope():
+    a = 15 #local variable
+    print("in function ",a)
+scope()
+print("outside function", a)
+
+**Recursion**
+-It means function calling it self.	
+
+**Decorators**
+-Using decorators u can add extra feature in existing function. ex. @staticmethod ,@classmethod
+
+**Modules**
+-We can create multiple modules and simply import to other files.
+
+**Objects**
+-Every objects have atleast one attribute.
+-Object have their personal behaviour(Methods itself).
+-Syntax of Creating Object: Object_name = Class_name()
+-to call method of class : class_name.method_name(object_name)
+
+**Methods**
+-Function is known as method in Object Oriented Language.
+
+**Use of special method __init__:
+
+Example:
+
+class Computer:
+    def __init__(self,cpu,ram):
+        self.cpu = cpu
+        self.ram = ram 
+   
+    def config(self):
+        print("Config is:",self.cpu,self.ram)
+
+com1 = Computer('i5',16)
+com2 = Computer('Ryzen',8)
+Computer.config(com1)
+Computer.config(com2)
+
+NOTE: Everytime you create an object it will aquire saprate space.
+
+**Types of variables:**
+-Instance variable: it will change only perticular value.
+-Class variable: it will affect all values in the class.
+
+**Inheritance**
+-it means child class inherits the properties or functionality of the parent class.
+
+**Super Keyword**
+-it is used to call method of super class in sub class.
+
+**File Method**
+1 close()
+2 detach()
+3 fileno()
+4 flush()
+5 isatty()
+6 read(n)
+7 readable()
+8 readline(n==1)
+9 seek(offset,from=SEEK_SET)
+10 seekable()
+11 write(s)
+12 writable()
+13 writelines(lines)
+
+**__name__ == __main__**
+
+-when you call function from the main file then name == main else it shows name == file_name
+
+**Method overloading**
+-same name of method having diffrent parameters.
+
+**Overriding**
+-same name & same number of parameters.		
+
+**Abstract method**
+-It has only declaration not definition. and class which has abstract method known as abstract class.
+
+**To use Abstract method in pythion**
+
+from abc import ABC,abstractmethod
+
+ExAMPLE:
+
+from abc import ABC,abstractmethod
+
+class Computer(ABC):
+    @abstractmethod
+    def process(self):
+        pass
+class Laptop(Computer):
+    def process(self):
+        print("Running")
+    
+com1 = Laptop()
+com1.process()
+       
+**Iterator**
+-it will iterate the value using __next__()   
+EXAMPLE:
+
+nums = [11,22,33,44]
+it = iter(nums)
+print(it.__next__())
+
+**Exception Handling**
+-Try,Except and finally
+
+EXAMPLE:
+
+a = 5
+b = 0
+
+try:
+    print(a/b)
+except Exception as e:
+    print("Its an Divide by zero error!",e)
+finally:
+    print("Done!")
+print(it.__next__())
+
+steps to create project:
+
+1) django-admin startproject name
+2) go to root file/ project file
+3) python manage.py startapp course
+4) to install : open settings.py --> goto INSTALLED_APPS 
+5) open views.py : import httpresponse class from django.http module
+6) write function in views.py --> def function_name(request):
+					return httpResponse('Hello')
+7) save it.
+
+W269N-WFGWX-YVC9B-436C9-T83GX
+
+
+
+---------------------------------------------DJANGO------------------------------------------------
+
+to run server first got to perticular env.
+example: workon test
+
+to make app just type 
+python manage.py startapp App_Name
+example: python manage.py startapp calc
+
+install app :
+INSTALLED_APPS = [
+    'django.contrib.admin','course']	
+
+
+**To access static file**
+- {%load static%}
+    <a href="{%static 'blog/mystatic.txt' %}">Click ME</a>
+
+**To add static file**
+- STATICFILES_DIRS = [
+	os.path.join(BASE_DIR,('folder_name/static_filename')
+]
+-STATIC_ROOT = [
+	os.path.join(BASE_DIR, 'assets')
+]
+
+**To copy static file items**
+-python manage.py collectstatic
+
+**MVT**
+-Stands for Model View Template
+-Model handles the database.
+-View handles the interface.
+-Template handles the modules.
+
+**ORM**
+-Stands for object relational mapper.
+-It can identify database table just by looking class name. and can manage columns according to given attributes.
+

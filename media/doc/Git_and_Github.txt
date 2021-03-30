@@ -1,0 +1,16 @@
+Git and Github
+
+git status : display status of your project
+git add: to add file
+git add -A : to add multiple files
+git commit: to commit your work
+git commit-A: to commit more than one file 
+git commit -m: "Commit_line"
+git checkout: recover last commit
+git checkout -f: recover multiple file
+git log: display commits
+git log -p -(commitnumber): filter files
+git diff: show editing in file
+git rm --cached: remove from staging area
+git rm: delete file
+git branch: to make copy file.
